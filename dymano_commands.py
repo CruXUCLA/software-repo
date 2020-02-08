@@ -48,19 +48,21 @@ else:
     print(json.dumps(item, indent=4, cls=DecimalEncoder))
 
 # Update Item
-insert_name = "test2"
-
-response = dynamoTable.update_item(
-    Key={
+insert_name = "test1"
+try :
+    response = dynamoTable.update_item(
+     Key={
         'name': insert_name,
-    },
-    UpdateExpression="set id = :i, age=:a",
-    ExpressionAttributeValues={
-        ':i': decimal.Decimal(333222),
-        ':a': 21
-    },
-    ReturnValues="UPDATED_NEW"
-)
+     },
+     UpdateExpression="set age=:a, id=:i",
+     ConditionExpression='attribute_exists(id)',
+     ExpressionAttributeValues={
+        ':i': decimal.Decimal(1111111),
+        ':a': 50
+     },
+     ReturnValues="UPDATED_NEW"
+    )
+except ClientError as e:
+    print(e.response['Error']['Message'])
 
 print("Update Item succeeded")
-# print(json.dumps(response, indent=4, cls=DecimalEncoder))
