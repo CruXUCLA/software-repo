@@ -5,7 +5,7 @@ This is code written in Processing which receives an OSC stream and prints it ou
 An OscP5 object will listen on a certain port via UDP for an OSC message. If the OSC message has a desired address pattern, it will be broken down to its arguments. An incoming osc message with more than one argument consists of an address stream and an Object list.
 
 #What You Will Need
--The latest processing IDE, which can be found here: https://processing.org/download/
+-A Processing IDE, which can be downloaded here: https://processing.org/download/
 -The oscP5 libarary
   -After installation, import the oscP5 library by going up to top bar and going to Sketch --> Import Library --> Add Library... --> and type in oscP5 into the search bar. Then install the library.
 -An device transmitting an OSC stream
