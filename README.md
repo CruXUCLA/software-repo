@@ -17,7 +17,7 @@ An OscP5 object will listen on a certain port via UDP for an OSC message. If the
 
 # Essentials
 - Make sure the receiving device and the sending device are on the same WiFi network. However, don't connect to school WiFi since many university and college networks block UDP traffic. Therefore, opt for a home WiFi network or a WiFi hotspot.
-- Make sure to type in the IP address of the device receiving the OSC stream into the device transmitting the stream and make sure the port it is emitting at is the same port that the device receiving the stream is listening at.
+- Make sure to type in the IP address of the device receiving the OSC stream into the device transmitting the stream and make sure the port it is emitting at is the same port that the receiving device is listening at.
 
 # Credits
 The code here was compiled almost entirely from Andreas Schlegel's examples for implementing his oscP5 library: http://www.sojamo.de/libraries/oscP5/#examples
