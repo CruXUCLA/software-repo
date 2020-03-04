@@ -51,6 +51,3 @@
     except ClientError as e:
         print(e.response['Error']['Message'])
 ```
-
-### Updates
-```*fixed "updateItem" because it put an item if the item to update didn't exist```
