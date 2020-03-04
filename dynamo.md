@@ -5,7 +5,7 @@
 [Python Scripts](https://www.youtube.com/watch?v=G68oSgFotZA)  
 
 ### Commands
-#### putItem(userName,id,age):
+#### putItem
 ```def putItem(name,age,id):
     response = dynamoTable.put_item(
         Item={
@@ -15,7 +15,7 @@
         }
     )
 ```
-#### getItem(userName):
+#### getItem
 ```def getItem(userName):
     get_name = userName
 
@@ -32,7 +32,7 @@
         print("Data :")
         print(json.dumps(item, indent=4, cls=DecimalEncoder))
 ```
-#### updateItem(userName,id,age):
+#### updateItem
 ```def updateItem(userName,id,age):
     insert_name = userName
     try :
